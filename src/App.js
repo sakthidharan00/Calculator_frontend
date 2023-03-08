@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     try {
-      axios.get("https://calculator-ie1a.onrender.com/calculator/data").then((doc) => {
+      axios.get("https://calculator-backend.onrender.com/calculator/data").then((doc) => {
 
         setHistory(doc.data.history);
       });
@@ -32,7 +32,7 @@ function App() {
     else {
       try {
 
-        await axios.put("https://calculator-ie1a.onrender.com/calculator/data/", { data: value }).then((doc) => {
+        await axios.put("https://calculator-backend.onrender.com/calculator/data/", { data: value }).then((doc) => {
 
           const result = eval(value);
           console.log(doc);
